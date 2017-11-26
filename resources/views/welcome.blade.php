@@ -113,16 +113,19 @@
                     <h2>our team</h2>
                     <h4>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</h4>
                 </div>
+                @foreach($Dokter as $index=>$item)
                 <div class="col-md-2 single-member col-sm-4">
                     <div class="person">
                         <img class="img-responsive" src="{{url('doctor/img/member1.jpg')}}" alt="member-1">
                     </div>
                     <div class="person-detail">
                         <div class="arrow-bottom"></div>
-                        <h3>Dr. M. Weiner, M.D.</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                        <h3>{{ $value->name}}</h3>
+                        <p>{{ $value->content}} </p>
+                        
                     </div>
                 </div>
+                @endforeach
                 <div class="col-md-2 single-member col-sm-4">
                     <div class="person-detail">
                         <div class="arrow-top"></div>
